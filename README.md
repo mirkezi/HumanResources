@@ -2,7 +2,7 @@
 Hi!
 This repo is a personal project to showcase achieved knowledge in .NET backend development.
 
-It comprehends:
+## It comprehends:
 1. Logging with Serilog
 2. Use of middlewares
 3. Swagger / OpenAPI
@@ -11,8 +11,10 @@ It comprehends:
 
 ### Install EF tool for migrations and commands:
 1. dotnet tool install --global dotnet-ef
-2. dotnet-ef migrations add InitialCreate 
-3. dotnet-ef database update
+
+### Database commands:
+1. dotnet-ef migrations add InitialCreate 
+2. dotnet-ef database update
 
 ### Required Packages (commands):
 1. dotnet add package Microsoft.AspNetCore.OpenApi
