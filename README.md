@@ -9,8 +9,12 @@ It comprehends:
 4. HTTP methods for CRUD operations.
 5. Use of EntityFrameworkcore with Sqlite database
 
-### Required Packages (commands):
+### Install EF tool for migrations and commands:
+1. dotnet tool install --global dotnet-ef
+2. dotnet-ef migrations add InitialCreate 
+3. dotnet-ef database update
 
+### Required Packages (commands):
 1. dotnet add package Microsoft.AspNetCore.OpenApi
 2. dotnet add package Swashbuckle.AspNetCore
 3. dotnet add package Microsoft.EntityFrameworkCore
