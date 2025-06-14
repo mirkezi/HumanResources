@@ -2,6 +2,8 @@ using Serilog;
 using System;
 using Swashbuckle.AspNetCore;
 using Microsoft.EntityFrameworkCore;
+using HumanResources;
+using HumanResources.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +11,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddSerilog();
 builder.Services.AddSwaggerGen();
 builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddDbContext<HRContext>();
 
 // Logging builder settings
 builder.Host.UseSerilog();
@@ -54,15 +57,16 @@ app.Use(async (context, next) =>
     try
     {
         var input = context.Request.Query["input"];
-        if (isValidInput(input))
+        if (!string.IsNullOrEmpty(input))
         {
-            await next.Invoke();
+            if (!isValidInput(input))
+            {
+                context.Response.StatusCode = 400;
+                await context.Response.WriteAsync("Invalid Input detected");
+                return;
+            }
         }
-        else
-        {
-            context.Response.StatusCode = 400;
-            await context.Response.WriteAsync("Invalid Input detected");
-        }
+        await next.Invoke();
     }
     catch (Exception ex)
     {
@@ -74,11 +78,71 @@ app.Use(async (context, next) =>
 
 // HTTP METHODS -> Employee
 
+// GET: Get all employees
+app.MapGet("/employees", async (HRContext db) =>
+{
+    try
+    {
+        var employees = await db.Employees.ToListAsync();
+        return Results.Ok(employees);
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Can't GET Employees: {ex.Message}");
+        return Results.BadRequest();
+    }
+});
+
+// POST: Create a new Employee
+app.MapPost("/employees", async (HRContext db, HumanResources.Models.Employee newEmployee) =>
+{
+    try
+    {
+        db.Employees.Add(newEmployee);
+        await db.SaveChangesAsync();
+        return Results.Created($"Employee added: {newEmployee.FirstName}", newEmployee);
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Can't create employee: {ex.Message}");
+        return Results.BadRequest();
+    }
+});
 // HTTP METHODS -> Department
 
+//GET: Get All Departments
+app.MapGet("/departments", async (HRContext db) =>
+{
+    try
+    {
+        var departments = await db.Departments.ToListAsync();
+        return Results.Ok(departments);
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Couldn't retrieve departments: {ex.Message}");
+        return Results.BadRequest();
+    }
+});
+
+//POST: Create a new Department
+app.MapPost("/departments", async (HRContext db, HumanResources.Models.Department newDepartment) =>
+{
+    try
+    {
+        db.Departments.Add(newDepartment);
+        await db.SaveChangesAsync();
+        return Results.Created($"Department Created: {newDepartment.Name}.", newDepartment);
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Couldn't create Department: {ex.Message}");
+        return Results.BadRequest();
+    }
+});
 app.Run();
 
 static bool isValidInput(string input)
 {
-    return !string.IsNullOrWhiteSpace(input) && !input.Contains("<script>", StringComparison.OrdinalIgnoreCase) && input.All(char.IsLetterOrDigit);
+    return !input.Contains("<script>", StringComparison.OrdinalIgnoreCase) && input.All(char.IsLetterOrDigit);
 }

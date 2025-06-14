@@ -1,0 +1,488 @@
+2025-06-14 22:10:24.230 +02:00 [INF] Now listening on: http://localhost:5267
+2025-06-14 22:10:26.430 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/ - null null
+2025-06-14 22:10:26.483 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Body was inferred but the method does not allow inferred body parameters.
+Below is the list of parameters that we found: 
+
+Parameter           | Source                        
+---------------------------------------------------------------------------------
+db                  | Body (Inferred)
+
+
+Did you mean to register the "Body (Inferred)" parameter(s) as a Service or apply the [FromServices] or [FromBody] attribute?
+
+
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.CreateArguments(ParameterInfo[] parameters, RequestDelegateFactoryContext factoryContext)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.CreateArgumentsAndInferMetadata(MethodInfo methodInfo, RequestDelegateFactoryContext factoryContext)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.InferMetadata(MethodInfo methodInfo, RequestDelegateFactoryOptions options)
+   at Microsoft.AspNetCore.Routing.RouteEndpointDataSource.CreateRouteEndpointBuilder(RouteEntry entry, RoutePattern groupPrefix, IReadOnlyList`1 groupConventions, IReadOnlyList`1 groupFinallyConventions)
+   at Microsoft.AspNetCore.Routing.RouteEndpointDataSource.get_Endpoints()
+   at Microsoft.AspNetCore.Routing.CompositeEndpointDataSource.CreateEndpointsUnsynchronized()
+   at Microsoft.AspNetCore.Routing.CompositeEndpointDataSource.EnsureEndpointsInitialized()
+   at Microsoft.AspNetCore.Routing.CompositeEndpointDataSource.get_Endpoints()
+   at Microsoft.AspNetCore.Routing.DataSourceDependentCache`1.Initialize()
+   at System.Threading.LazyInitializer.EnsureInitializedCore[T](T& target, Boolean& initialized, Object& syncLock, Func`1 valueFactory)
+   at Microsoft.AspNetCore.Routing.Matching.DataSourceDependentMatcher..ctor(EndpointDataSource dataSource, Lifetime lifetime, Func`1 matcherBuilderFactory)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherFactory.CreateMatcher(EndpointDataSource dataSource)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.InitializeCoreAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.<Invoke>g__AwaitMatcher|10_0(EndpointRoutingMiddleware middleware, HttpContext httpContext, Task`1 matcherTask)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-06-14 22:10:26.533 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/ - 500 null text/html; charset=utf-8 104.958ms
+2025-06-14 22:10:26.623 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/favicon.ico - null null
+2025-06-14 22:10:26.625 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Body was inferred but the method does not allow inferred body parameters.
+Below is the list of parameters that we found: 
+
+Parameter           | Source                        
+---------------------------------------------------------------------------------
+db                  | Body (Inferred)
+
+
+Did you mean to register the "Body (Inferred)" parameter(s) as a Service or apply the [FromServices] or [FromBody] attribute?
+
+
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.CreateArguments(ParameterInfo[] parameters, RequestDelegateFactoryContext factoryContext)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.CreateArgumentsAndInferMetadata(MethodInfo methodInfo, RequestDelegateFactoryContext factoryContext)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.InferMetadata(MethodInfo methodInfo, RequestDelegateFactoryOptions options)
+   at Microsoft.AspNetCore.Routing.RouteEndpointDataSource.CreateRouteEndpointBuilder(RouteEntry entry, RoutePattern groupPrefix, IReadOnlyList`1 groupConventions, IReadOnlyList`1 groupFinallyConventions)
+   at Microsoft.AspNetCore.Routing.RouteEndpointDataSource.get_Endpoints()
+   at Microsoft.AspNetCore.Routing.CompositeEndpointDataSource.CreateEndpointsUnsynchronized()
+   at Microsoft.AspNetCore.Routing.CompositeEndpointDataSource.EnsureEndpointsInitialized()
+   at Microsoft.AspNetCore.Routing.CompositeEndpointDataSource.get_Endpoints()
+   at Microsoft.AspNetCore.Routing.DataSourceDependentCache`1.Initialize()
+   at System.Threading.LazyInitializer.EnsureInitializedCore[T](T& target, Boolean& initialized, Object& syncLock, Func`1 valueFactory)
+   at Microsoft.AspNetCore.Routing.Matching.DataSourceDependentMatcher..ctor(EndpointDataSource dataSource, Lifetime lifetime, Func`1 matcherBuilderFactory)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherFactory.CreateMatcher(EndpointDataSource dataSource)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.InitializeCoreAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.<Invoke>g__AwaitMatcher|10_0(EndpointRoutingMiddleware middleware, HttpContext httpContext, Task`1 matcherTask)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-06-14 22:10:26.629 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/favicon.ico - 500 null text/plain; charset=utf-8 6.5651ms
+2025-06-14 22:11:04.995 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/employees - null null
+2025-06-14 22:11:04.996 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Body was inferred but the method does not allow inferred body parameters.
+Below is the list of parameters that we found: 
+
+Parameter           | Source                        
+---------------------------------------------------------------------------------
+db                  | Body (Inferred)
+
+
+Did you mean to register the "Body (Inferred)" parameter(s) as a Service or apply the [FromServices] or [FromBody] attribute?
+
+
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.CreateArguments(ParameterInfo[] parameters, RequestDelegateFactoryContext factoryContext)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.CreateArgumentsAndInferMetadata(MethodInfo methodInfo, RequestDelegateFactoryContext factoryContext)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.InferMetadata(MethodInfo methodInfo, RequestDelegateFactoryOptions options)
+   at Microsoft.AspNetCore.Routing.RouteEndpointDataSource.CreateRouteEndpointBuilder(RouteEntry entry, RoutePattern groupPrefix, IReadOnlyList`1 groupConventions, IReadOnlyList`1 groupFinallyConventions)
+   at Microsoft.AspNetCore.Routing.RouteEndpointDataSource.get_Endpoints()
+   at Microsoft.AspNetCore.Routing.CompositeEndpointDataSource.CreateEndpointsUnsynchronized()
+   at Microsoft.AspNetCore.Routing.CompositeEndpointDataSource.EnsureEndpointsInitialized()
+   at Microsoft.AspNetCore.Routing.CompositeEndpointDataSource.get_Endpoints()
+   at Microsoft.AspNetCore.Routing.DataSourceDependentCache`1.Initialize()
+   at System.Threading.LazyInitializer.EnsureInitializedCore[T](T& target, Boolean& initialized, Object& syncLock, Func`1 valueFactory)
+   at Microsoft.AspNetCore.Routing.Matching.DataSourceDependentMatcher..ctor(EndpointDataSource dataSource, Lifetime lifetime, Func`1 matcherBuilderFactory)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherFactory.CreateMatcher(EndpointDataSource dataSource)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.InitializeCoreAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.<Invoke>g__AwaitMatcher|10_0(EndpointRoutingMiddleware middleware, HttpContext httpContext, Task`1 matcherTask)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-06-14 22:11:05.002 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/employees - 500 null text/html; charset=utf-8 7.0043ms
+2025-06-14 22:11:05.042 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/favicon.ico - null null
+2025-06-14 22:11:05.043 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Body was inferred but the method does not allow inferred body parameters.
+Below is the list of parameters that we found: 
+
+Parameter           | Source                        
+---------------------------------------------------------------------------------
+db                  | Body (Inferred)
+
+
+Did you mean to register the "Body (Inferred)" parameter(s) as a Service or apply the [FromServices] or [FromBody] attribute?
+
+
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.CreateArguments(ParameterInfo[] parameters, RequestDelegateFactoryContext factoryContext)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.CreateArgumentsAndInferMetadata(MethodInfo methodInfo, RequestDelegateFactoryContext factoryContext)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.InferMetadata(MethodInfo methodInfo, RequestDelegateFactoryOptions options)
+   at Microsoft.AspNetCore.Routing.RouteEndpointDataSource.CreateRouteEndpointBuilder(RouteEntry entry, RoutePattern groupPrefix, IReadOnlyList`1 groupConventions, IReadOnlyList`1 groupFinallyConventions)
+   at Microsoft.AspNetCore.Routing.RouteEndpointDataSource.get_Endpoints()
+   at Microsoft.AspNetCore.Routing.CompositeEndpointDataSource.CreateEndpointsUnsynchronized()
+   at Microsoft.AspNetCore.Routing.CompositeEndpointDataSource.EnsureEndpointsInitialized()
+   at Microsoft.AspNetCore.Routing.CompositeEndpointDataSource.get_Endpoints()
+   at Microsoft.AspNetCore.Routing.DataSourceDependentCache`1.Initialize()
+   at System.Threading.LazyInitializer.EnsureInitializedCore[T](T& target, Boolean& initialized, Object& syncLock, Func`1 valueFactory)
+   at Microsoft.AspNetCore.Routing.Matching.DataSourceDependentMatcher..ctor(EndpointDataSource dataSource, Lifetime lifetime, Func`1 matcherBuilderFactory)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherFactory.CreateMatcher(EndpointDataSource dataSource)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.InitializeCoreAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.<Invoke>g__AwaitMatcher|10_0(EndpointRoutingMiddleware middleware, HttpContext httpContext, Task`1 matcherTask)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-06-14 22:11:05.049 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/favicon.ico - 500 null text/plain; charset=utf-8 6.5525ms
+2025-06-14 22:11:49.325 +02:00 [INF] Now listening on: http://localhost:5267
+2025-06-14 22:11:50.423 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/employees - null null
+2025-06-14 22:11:50.451 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/employees - 400 null null 29.4636ms
+2025-06-14 22:11:50.494 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/favicon.ico - null null
+2025-06-14 22:11:50.496 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/favicon.ico - 400 null null 1.9652ms
+2025-06-14 22:11:53.786 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/ - null null
+2025-06-14 22:11:53.788 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/ - 400 null null 1.5401ms
+2025-06-14 22:11:53.834 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/favicon.ico - null null
+2025-06-14 22:11:53.835 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/favicon.ico - 400 null null 0.413ms
+2025-06-14 22:56:04.029 +02:00 [INF] Now listening on: http://localhost:5267
+2025-06-14 22:56:07.058 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/ - null null
+2025-06-14 22:56:07.097 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Body was inferred but the method does not allow inferred body parameters.
+Below is the list of parameters that we found: 
+
+Parameter           | Source                        
+---------------------------------------------------------------------------------
+db                  | Body (Inferred)
+
+
+Did you mean to register the "Body (Inferred)" parameter(s) as a Service or apply the [FromServices] or [FromBody] attribute?
+
+
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.CreateArguments(ParameterInfo[] parameters, RequestDelegateFactoryContext factoryContext)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.CreateArgumentsAndInferMetadata(MethodInfo methodInfo, RequestDelegateFactoryContext factoryContext)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.InferMetadata(MethodInfo methodInfo, RequestDelegateFactoryOptions options)
+   at Microsoft.AspNetCore.Routing.RouteEndpointDataSource.CreateRouteEndpointBuilder(RouteEntry entry, RoutePattern groupPrefix, IReadOnlyList`1 groupConventions, IReadOnlyList`1 groupFinallyConventions)
+   at Microsoft.AspNetCore.Routing.RouteEndpointDataSource.get_Endpoints()
+   at Microsoft.AspNetCore.Routing.CompositeEndpointDataSource.CreateEndpointsUnsynchronized()
+   at Microsoft.AspNetCore.Routing.CompositeEndpointDataSource.EnsureEndpointsInitialized()
+   at Microsoft.AspNetCore.Routing.CompositeEndpointDataSource.get_Endpoints()
+   at Microsoft.AspNetCore.Routing.DataSourceDependentCache`1.Initialize()
+   at System.Threading.LazyInitializer.EnsureInitializedCore[T](T& target, Boolean& initialized, Object& syncLock, Func`1 valueFactory)
+   at Microsoft.AspNetCore.Routing.Matching.DataSourceDependentMatcher..ctor(EndpointDataSource dataSource, Lifetime lifetime, Func`1 matcherBuilderFactory)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherFactory.CreateMatcher(EndpointDataSource dataSource)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.InitializeCoreAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.<Invoke>g__AwaitMatcher|10_0(EndpointRoutingMiddleware middleware, HttpContext httpContext, Task`1 matcherTask)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-06-14 22:56:07.141 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/ - 500 null text/html; charset=utf-8 85.346ms
+2025-06-14 22:56:07.230 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/favicon.ico - null null
+2025-06-14 22:56:07.232 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Body was inferred but the method does not allow inferred body parameters.
+Below is the list of parameters that we found: 
+
+Parameter           | Source                        
+---------------------------------------------------------------------------------
+db                  | Body (Inferred)
+
+
+Did you mean to register the "Body (Inferred)" parameter(s) as a Service or apply the [FromServices] or [FromBody] attribute?
+
+
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.CreateArguments(ParameterInfo[] parameters, RequestDelegateFactoryContext factoryContext)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.CreateArgumentsAndInferMetadata(MethodInfo methodInfo, RequestDelegateFactoryContext factoryContext)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.InferMetadata(MethodInfo methodInfo, RequestDelegateFactoryOptions options)
+   at Microsoft.AspNetCore.Routing.RouteEndpointDataSource.CreateRouteEndpointBuilder(RouteEntry entry, RoutePattern groupPrefix, IReadOnlyList`1 groupConventions, IReadOnlyList`1 groupFinallyConventions)
+   at Microsoft.AspNetCore.Routing.RouteEndpointDataSource.get_Endpoints()
+   at Microsoft.AspNetCore.Routing.CompositeEndpointDataSource.CreateEndpointsUnsynchronized()
+   at Microsoft.AspNetCore.Routing.CompositeEndpointDataSource.EnsureEndpointsInitialized()
+   at Microsoft.AspNetCore.Routing.CompositeEndpointDataSource.get_Endpoints()
+   at Microsoft.AspNetCore.Routing.DataSourceDependentCache`1.Initialize()
+   at System.Threading.LazyInitializer.EnsureInitializedCore[T](T& target, Boolean& initialized, Object& syncLock, Func`1 valueFactory)
+   at Microsoft.AspNetCore.Routing.Matching.DataSourceDependentMatcher..ctor(EndpointDataSource dataSource, Lifetime lifetime, Func`1 matcherBuilderFactory)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherFactory.CreateMatcher(EndpointDataSource dataSource)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.InitializeCoreAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.<Invoke>g__AwaitMatcher|10_0(EndpointRoutingMiddleware middleware, HttpContext httpContext, Task`1 matcherTask)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-06-14 22:56:07.238 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/favicon.ico - 500 null text/plain; charset=utf-8 6.6918ms
+2025-06-14 22:56:59.010 +02:00 [INF] Now listening on: http://localhost:5267
+2025-06-14 22:57:01.637 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/ - null null
+2025-06-14 22:57:01.676 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Body was inferred but the method does not allow inferred body parameters.
+Below is the list of parameters that we found: 
+
+Parameter           | Source                        
+---------------------------------------------------------------------------------
+db                  | Body (Inferred)
+
+
+Did you mean to register the "Body (Inferred)" parameter(s) as a Service or apply the [FromServices] or [FromBody] attribute?
+
+
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.CreateArguments(ParameterInfo[] parameters, RequestDelegateFactoryContext factoryContext)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.CreateArgumentsAndInferMetadata(MethodInfo methodInfo, RequestDelegateFactoryContext factoryContext)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.InferMetadata(MethodInfo methodInfo, RequestDelegateFactoryOptions options)
+   at Microsoft.AspNetCore.Routing.RouteEndpointDataSource.CreateRouteEndpointBuilder(RouteEntry entry, RoutePattern groupPrefix, IReadOnlyList`1 groupConventions, IReadOnlyList`1 groupFinallyConventions)
+   at Microsoft.AspNetCore.Routing.RouteEndpointDataSource.get_Endpoints()
+   at Microsoft.AspNetCore.Routing.CompositeEndpointDataSource.CreateEndpointsUnsynchronized()
+   at Microsoft.AspNetCore.Routing.CompositeEndpointDataSource.EnsureEndpointsInitialized()
+   at Microsoft.AspNetCore.Routing.CompositeEndpointDataSource.get_Endpoints()
+   at Microsoft.AspNetCore.Routing.DataSourceDependentCache`1.Initialize()
+   at System.Threading.LazyInitializer.EnsureInitializedCore[T](T& target, Boolean& initialized, Object& syncLock, Func`1 valueFactory)
+   at Microsoft.AspNetCore.Routing.Matching.DataSourceDependentMatcher..ctor(EndpointDataSource dataSource, Lifetime lifetime, Func`1 matcherBuilderFactory)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherFactory.CreateMatcher(EndpointDataSource dataSource)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.InitializeCoreAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.<Invoke>g__AwaitMatcher|10_0(EndpointRoutingMiddleware middleware, HttpContext httpContext, Task`1 matcherTask)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-06-14 22:57:01.720 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/ - 500 null text/html; charset=utf-8 84.9656ms
+2025-06-14 22:57:01.827 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/favicon.ico - null null
+2025-06-14 22:57:01.828 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Body was inferred but the method does not allow inferred body parameters.
+Below is the list of parameters that we found: 
+
+Parameter           | Source                        
+---------------------------------------------------------------------------------
+db                  | Body (Inferred)
+
+
+Did you mean to register the "Body (Inferred)" parameter(s) as a Service or apply the [FromServices] or [FromBody] attribute?
+
+
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.CreateArguments(ParameterInfo[] parameters, RequestDelegateFactoryContext factoryContext)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.CreateArgumentsAndInferMetadata(MethodInfo methodInfo, RequestDelegateFactoryContext factoryContext)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.InferMetadata(MethodInfo methodInfo, RequestDelegateFactoryOptions options)
+   at Microsoft.AspNetCore.Routing.RouteEndpointDataSource.CreateRouteEndpointBuilder(RouteEntry entry, RoutePattern groupPrefix, IReadOnlyList`1 groupConventions, IReadOnlyList`1 groupFinallyConventions)
+   at Microsoft.AspNetCore.Routing.RouteEndpointDataSource.get_Endpoints()
+   at Microsoft.AspNetCore.Routing.CompositeEndpointDataSource.CreateEndpointsUnsynchronized()
+   at Microsoft.AspNetCore.Routing.CompositeEndpointDataSource.EnsureEndpointsInitialized()
+   at Microsoft.AspNetCore.Routing.CompositeEndpointDataSource.get_Endpoints()
+   at Microsoft.AspNetCore.Routing.DataSourceDependentCache`1.Initialize()
+   at System.Threading.LazyInitializer.EnsureInitializedCore[T](T& target, Boolean& initialized, Object& syncLock, Func`1 valueFactory)
+   at Microsoft.AspNetCore.Routing.Matching.DataSourceDependentMatcher..ctor(EndpointDataSource dataSource, Lifetime lifetime, Func`1 matcherBuilderFactory)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherFactory.CreateMatcher(EndpointDataSource dataSource)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.InitializeCoreAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.<Invoke>g__AwaitMatcher|10_0(EndpointRoutingMiddleware middleware, HttpContext httpContext, Task`1 matcherTask)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-06-14 22:57:01.832 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/favicon.ico - 500 null text/plain; charset=utf-8 5.5423ms
+2025-06-14 22:57:49.960 +02:00 [INF] Now listening on: http://localhost:5267
+2025-06-14 22:57:51.675 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/ - null null
+2025-06-14 22:57:51.747 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/ - 400 null null 73.1106ms
+2025-06-14 22:57:51.789 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/favicon.ico - null null
+2025-06-14 22:57:51.791 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/favicon.ico - 400 null null 2.1626ms
+2025-06-14 22:57:56.593 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/employees - null null
+2025-06-14 22:57:56.595 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/employees - 400 null null 2.1509ms
+2025-06-14 22:57:56.635 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/favicon.ico - null null
+2025-06-14 22:57:56.636 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/favicon.ico - 400 null null 0.5806ms
+2025-06-14 22:58:49.255 +02:00 [INF] Now listening on: http://localhost:5267
+2025-06-14 22:58:49.392 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/employees - null null
+2025-06-14 22:58:49.470 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/employees - 500 null null 78.5653ms
+2025-06-14 22:58:49.510 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/favicon.ico - null null
+2025-06-14 22:58:49.512 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/favicon.ico - 500 null null 2.7645ms
+2025-06-14 22:59:10.413 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/swagger - null null
+2025-06-14 22:59:10.414 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/swagger - 301 0 null 1.7133ms
+2025-06-14 22:59:10.418 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/swagger/index.html - null null
+2025-06-14 22:59:10.490 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/swagger/index.html - 200 null text/html;charset=utf-8 71.3513ms
+2025-06-14 22:59:10.507 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/swagger/swagger-ui.css - null null
+2025-06-14 22:59:10.507 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/swagger/index.css - null null
+2025-06-14 22:59:10.509 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/swagger/swagger-ui-bundle.js - null null
+2025-06-14 22:59:10.509 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/swagger/swagger-ui-standalone-preset.js - null null
+2025-06-14 22:59:10.509 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/swagger/index.js - null null
+2025-06-14 22:59:10.510 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/swagger/index.js - 200 null application/javascript;charset=utf-8 0.9366ms
+2025-06-14 22:59:10.519 +02:00 [INF] Sending file. Request path: '/index.css'. Physical path: 'N/A'
+2025-06-14 22:59:10.519 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/swagger/index.css - 200 202 text/css 11.9335ms
+2025-06-14 22:59:10.526 +02:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-06-14 22:59:10.526 +02:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-06-14 22:59:10.528 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/swagger/swagger-ui.css - 200 154949 text/css 20.8094ms
+2025-06-14 22:59:10.528 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/swagger/swagger-ui-standalone-preset.js - 200 229223 text/javascript 18.3568ms
+2025-06-14 22:59:10.541 +02:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-06-14 22:59:10.542 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/swagger/swagger-ui-bundle.js - 200 1485241 text/javascript 32.4918ms
+2025-06-14 22:59:10.734 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/swagger/v1/swagger.json - null null
+2025-06-14 22:59:10.747 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/swagger/favicon-32x32.png - null null
+2025-06-14 22:59:10.748 +02:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2025-06-14 22:59:10.748 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/swagger/favicon-32x32.png - 200 628 image/png 1.2403ms
+2025-06-14 22:59:10.753 +02:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-06-14 22:59:10.829 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 95.3947ms
+2025-06-14 22:59:14.853 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/employees - null null
+2025-06-14 22:59:14.854 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/employees - 500 null null 0.869ms
+2025-06-14 22:59:55.176 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/ - null null
+2025-06-14 22:59:55.176 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/ - 500 null null 0.4095ms
+2025-06-14 22:59:55.228 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/favicon.ico - null null
+2025-06-14 22:59:55.228 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/favicon.ico - 500 null null 0.4888ms
+2025-06-14 23:00:25.387 +02:00 [INF] Now listening on: http://localhost:5267
+2025-06-14 23:00:25.441 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/ - null null
+2025-06-14 23:00:25.512 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/ - 400 null null 73.3007ms
+2025-06-14 23:00:25.553 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/favicon.ico - null null
+2025-06-14 23:00:25.556 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/favicon.ico - 400 null null 2.7011ms
+2025-06-14 23:00:37.862 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/ - null null
+2025-06-14 23:00:37.864 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/ - 400 null null 1.0242ms
+2025-06-14 23:00:37.900 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/favicon.ico - null null
+2025-06-14 23:00:37.900 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/favicon.ico - 400 null null 0.421ms
+2025-06-14 23:00:44.250 +02:00 [INF] Now listening on: http://localhost:5267
+2025-06-14 23:00:44.307 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/ - null null
+2025-06-14 23:00:44.372 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/ - 400 null null 67.1062ms
+2025-06-14 23:00:44.419 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/favicon.ico - null null
+2025-06-14 23:00:44.421 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/favicon.ico - 400 null null 2.2815ms
+2025-06-14 23:00:50.891 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/employees - null null
+2025-06-14 23:00:50.893 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/employees - 400 null null 1.5715ms
+2025-06-14 23:00:50.937 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/favicon.ico - null null
+2025-06-14 23:00:50.937 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/favicon.ico - 400 null null 0.3846ms
+2025-06-14 23:01:04.997 +02:00 [INF] Now listening on: http://localhost:5267
+2025-06-14 23:01:09.185 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/employees - null null
+2025-06-14 23:01:09.254 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/employees - 400 null null 70.9459ms
+2025-06-14 23:01:09.291 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/favicon.ico - null null
+2025-06-14 23:01:09.293 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/favicon.ico - 400 null null 2.6636ms
+2025-06-14 23:01:10.244 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/employees - null null
+2025-06-14 23:01:10.246 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/employees - 400 null null 1.4769ms
+2025-06-14 23:01:10.286 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/favicon.ico - null null
+2025-06-14 23:01:10.286 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/favicon.ico - 400 null null 0.4001ms
+2025-06-14 23:02:04.776 +02:00 [INF] Now listening on: http://localhost:5267
+2025-06-14 23:02:04.947 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/employees - null null
+2025-06-14 23:02:05.019 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/employees - 400 null null 73.7998ms
+2025-06-14 23:02:05.058 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/favicon.ico - null null
+2025-06-14 23:02:05.060 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/favicon.ico - 400 null null 2.2826ms
+2025-06-14 23:02:06.120 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/employees - null null
+2025-06-14 23:02:06.121 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/employees - 400 null null 1.4211ms
+2025-06-14 23:02:06.161 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/favicon.ico - null null
+2025-06-14 23:02:06.161 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/favicon.ico - 400 null null 0.572ms
+2025-06-14 23:02:06.966 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/employees - null null
+2025-06-14 23:02:06.966 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/employees - 400 null null 0.5694ms
+2025-06-14 23:02:07.003 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/favicon.ico - null null
+2025-06-14 23:02:07.003 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/favicon.ico - 400 null null 0.5124ms
+2025-06-14 23:02:09.608 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/employees - null null
+2025-06-14 23:02:09.609 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/employees - 400 null null 0.4913ms
+2025-06-14 23:02:09.650 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/favicon.ico - null null
+2025-06-14 23:02:09.650 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/favicon.ico - 400 null null 0.4781ms
+2025-06-14 23:05:21.952 +02:00 [INF] Now listening on: http://localhost:5267
+2025-06-14 23:05:22.455 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/employees - null null
+2025-06-14 23:05:22.523 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/employees - 200 0 null 69.602ms
+2025-06-14 23:05:22.571 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/favicon.ico - null null
+2025-06-14 23:05:22.573 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/favicon.ico - 200 0 null 2.5061ms
+2025-06-14 23:05:26.883 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/employees - null null
+2025-06-14 23:05:26.884 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/employees - 200 0 null 1.0732ms
+2025-06-14 23:05:26.916 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/favicon.ico - null null
+2025-06-14 23:05:26.916 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/favicon.ico - 200 0 null 0.4163ms
+2025-06-14 23:05:29.458 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/ - null null
+2025-06-14 23:05:29.458 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/ - 200 0 null 0.3306ms
+2025-06-14 23:05:29.508 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/favicon.ico - null null
+2025-06-14 23:05:29.508 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/favicon.ico - 200 0 null 0.3312ms
+2025-06-14 23:05:33.050 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/employees - null null
+2025-06-14 23:05:33.050 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/employees - 200 0 null 0.7438ms
+2025-06-14 23:05:33.104 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/favicon.ico - null null
+2025-06-14 23:05:33.104 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/favicon.ico - 200 0 null 0.4508ms
+2025-06-14 23:05:40.939 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/swagger/v1/swagger.json - null null
+2025-06-14 23:05:40.956 +02:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-06-14 23:05:41.020 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 80.9751ms
+2025-06-14 23:05:44.416 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/employees - null null
+2025-06-14 23:05:44.417 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/employees - 200 0 null 0.3863ms
+2025-06-14 23:12:24.137 +02:00 [INF] Now listening on: http://localhost:5267
+2025-06-14 23:12:25.004 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/swagger/index.html - null null
+2025-06-14 23:12:25.146 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/swagger/index.html - 200 null text/html;charset=utf-8 145.0577ms
+2025-06-14 23:12:25.247 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/swagger/v1/swagger.json - null null
+2025-06-14 23:12:25.262 +02:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-06-14 23:12:25.357 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 109.961ms
+2025-06-14 23:16:13.526 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5267/employees - application/json 72
+2025-06-14 23:16:13.533 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5267/employees - 200 0 null 6.9364ms
+2025-06-14 23:16:20.125 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/employees - null null
+2025-06-14 23:16:20.126 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/employees - 200 0 null 1.3505ms
+2025-06-14 23:18:55.507 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/employees - null null
+2025-06-14 23:18:55.508 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/employees - 200 0 null 0.6778ms
+2025-06-14 23:23:00.329 +02:00 [INF] Now listening on: http://localhost:5267
+2025-06-14 23:23:00.383 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/swagger/index.html - null null
+2025-06-14 23:23:00.528 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/swagger/index.html - 200 null text/html;charset=utf-8 147.1271ms
+2025-06-14 23:23:00.671 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/swagger/v1/swagger.json - null null
+2025-06-14 23:23:00.687 +02:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-06-14 23:23:00.789 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 118.588ms
+2025-06-14 23:23:06.575 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/employees - null null
+2025-06-14 23:23:06.579 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/employees - 200 0 null 3.6015ms
+2025-06-14 23:23:06.625 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/favicon.ico - null null
+2025-06-14 23:23:06.625 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/favicon.ico - 200 0 null 0.7192ms
+2025-06-14 23:25:37.902 +02:00 [INF] Now listening on: http://localhost:5267
+2025-06-14 23:25:38.082 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/employees - null null
+2025-06-14 23:25:38.172 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/employees - 200 0 null 92.4617ms
+2025-06-14 23:25:38.207 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/favicon.ico - null null
+2025-06-14 23:25:38.210 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/favicon.ico - 200 0 null 2.7509ms
+2025-06-14 23:25:39.619 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/employees - null null
+2025-06-14 23:25:39.620 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/employees - 200 0 null 1.2168ms
+2025-06-14 23:25:39.659 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/favicon.ico - null null
+2025-06-14 23:25:39.660 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/favicon.ico - 200 0 null 0.6065ms
+2025-06-14 23:26:39.647 +02:00 [INF] Now listening on: http://localhost:5267
+2025-06-14 23:26:41.639 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/ - null null
+2025-06-14 23:26:41.745 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/ - 404 0 null 108.4382ms
+2025-06-14 23:26:41.764 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5267/, Response status code: 404
+2025-06-14 23:26:52.390 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/employees - null null
+2025-06-14 23:26:52.395 +02:00 [INF] Executing endpoint 'HTTP: GET /employees'
+2025-06-14 23:26:53.630 +02:00 [INF] Setting HTTP status code 200.
+2025-06-14 23:26:53.630 +02:00 [INF] Writing value of type 'List`1' as Json.
+2025-06-14 23:26:53.635 +02:00 [INF] Executed endpoint 'HTTP: GET /employees'
+2025-06-14 23:26:53.645 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/employees - 200 null application/json; charset=utf-8 1255.147ms
+2025-06-14 23:26:53.679 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/favicon.ico - null null
+2025-06-14 23:26:53.680 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/favicon.ico - 404 0 null 1.3572ms
+2025-06-14 23:26:53.680 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5267/favicon.ico, Response status code: 404
+2025-06-14 23:27:18.360 +02:00 [INF] Now listening on: http://localhost:5267
+2025-06-14 23:27:18.460 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/employees - null null
+2025-06-14 23:27:18.562 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/employees - 200 0 null 105.2679ms
+2025-06-14 23:27:19.907 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/employees - null null
+2025-06-14 23:27:19.910 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/employees - 200 0 null 2.9057ms
+2025-06-14 23:27:34.016 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/employees - null null
+2025-06-14 23:27:34.017 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/employees - 200 0 null 1.3487ms
+2025-06-14 23:27:37.757 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/employees - null null
+2025-06-14 23:27:37.758 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/employees - 200 0 null 0.6181ms
+2025-06-14 23:29:53.168 +02:00 [INF] Now listening on: http://localhost:5267
+2025-06-14 23:29:53.367 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/employees - null null
+2025-06-14 23:29:53.463 +02:00 [INF] Executing endpoint 'HTTP: GET /employees'
+2025-06-14 23:29:54.253 +02:00 [INF] Setting HTTP status code 200.
+2025-06-14 23:29:54.254 +02:00 [INF] Writing value of type 'List`1' as Json.
+2025-06-14 23:29:54.257 +02:00 [INF] Executed endpoint 'HTTP: GET /employees'
+2025-06-14 23:29:54.267 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/employees - 200 null application/json; charset=utf-8 900.5608ms
+2025-06-14 23:30:08.123 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/swagger/v1/swagger.json - null null
+2025-06-14 23:30:08.142 +02:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-06-14 23:30:08.235 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 112.6248ms
+2025-06-14 23:30:33.044 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5267/employees - application/json 72
+2025-06-14 23:30:33.048 +02:00 [INF] Executing endpoint 'HTTP: POST /employees'
+2025-06-14 23:30:33.278 +02:00 [INF] Setting HTTP status code 400.
+2025-06-14 23:30:33.278 +02:00 [INF] Executed endpoint 'HTTP: POST /employees'
+2025-06-14 23:30:33.279 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5267/employees - 400 0 null 234.6462ms
+2025-06-14 23:36:14.764 +02:00 [INF] Now listening on: http://localhost:5267
+2025-06-14 23:36:19.846 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/swagger/index.html - null null
+2025-06-14 23:36:19.995 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/swagger/index.html - 200 null text/html;charset=utf-8 150.3678ms
+2025-06-14 23:36:20.122 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/swagger/v1/swagger.json - null null
+2025-06-14 23:36:20.138 +02:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-06-14 23:36:20.475 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 353.8026ms
+2025-06-14 23:36:40.202 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5267/departments - application/json 23
+2025-06-14 23:36:40.213 +02:00 [INF] Executing endpoint 'HTTP: POST /departments'
+2025-06-14 23:36:41.225 +02:00 [INF] Setting HTTP status code 201.
+2025-06-14 23:36:41.226 +02:00 [INF] Writing value of type 'Department' as Json.
+2025-06-14 23:36:41.229 +02:00 [INF] Executed endpoint 'HTTP: POST /departments'
+2025-06-14 23:36:41.238 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5267/departments - 201 null application/json; charset=utf-8 1035.9374ms
+2025-06-14 23:36:54.114 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/departments - null null
+2025-06-14 23:36:54.114 +02:00 [INF] Executing endpoint 'HTTP: GET /departments'
+2025-06-14 23:36:54.412 +02:00 [INF] Setting HTTP status code 200.
+2025-06-14 23:36:54.414 +02:00 [INF] Writing value of type 'List`1' as Json.
+2025-06-14 23:36:54.415 +02:00 [INF] Executed endpoint 'HTTP: GET /departments'
+2025-06-14 23:36:54.416 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/departments - 200 null application/json; charset=utf-8 302.1787ms
+2025-06-14 23:36:59.853 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/employees - null null
+2025-06-14 23:36:59.853 +02:00 [INF] Executing endpoint 'HTTP: GET /employees'
+2025-06-14 23:36:59.881 +02:00 [INF] Setting HTTP status code 200.
+2025-06-14 23:36:59.881 +02:00 [INF] Writing value of type 'List`1' as Json.
+2025-06-14 23:36:59.881 +02:00 [INF] Executed endpoint 'HTTP: GET /employees'
+2025-06-14 23:36:59.881 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/employees - 200 null application/json; charset=utf-8 28.3942ms
+2025-06-14 23:37:32.352 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5267/employees - application/json 72
+2025-06-14 23:37:32.353 +02:00 [INF] Executing endpoint 'HTTP: POST /employees'
+2025-06-14 23:37:32.382 +02:00 [INF] Setting HTTP status code 201.
+2025-06-14 23:37:32.382 +02:00 [INF] Writing value of type 'Employee' as Json.
+2025-06-14 23:37:32.383 +02:00 [INF] Executed endpoint 'HTTP: POST /employees'
+2025-06-14 23:37:32.383 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5267/employees - 201 null application/json; charset=utf-8 30.8082ms
+2025-06-14 23:37:42.651 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5267/employees - null null
+2025-06-14 23:37:42.651 +02:00 [INF] Executing endpoint 'HTTP: GET /employees'
+2025-06-14 23:37:42.653 +02:00 [INF] Setting HTTP status code 200.
+2025-06-14 23:37:42.654 +02:00 [INF] Writing value of type 'List`1' as Json.
+2025-06-14 23:37:42.654 +02:00 [INF] Executed endpoint 'HTTP: GET /employees'
+2025-06-14 23:37:42.654 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5267/employees - 200 null application/json; charset=utf-8 3.181ms
+2025-06-14 23:38:30.334 +02:00 [INF] Now listening on: http://localhost:5000
+2025-06-14 23:38:31.383 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/ - null null
+2025-06-14 23:38:31.487 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/ - 404 0 null 105.9165ms
+2025-06-14 23:38:31.505 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5000/, Response status code: 404
+2025-06-14 23:38:34.443 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - null null
+2025-06-14 23:38:34.456 +02:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-06-14 23:38:34.577 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 134.4699ms
+2025-06-14 23:38:37.559 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/employees - null null
+2025-06-14 23:38:37.562 +02:00 [INF] Executing endpoint 'HTTP: GET /employees'
+2025-06-14 23:38:38.514 +02:00 [INF] Setting HTTP status code 200.
+2025-06-14 23:38:38.515 +02:00 [INF] Writing value of type 'List`1' as Json.
+2025-06-14 23:38:38.520 +02:00 [INF] Executed endpoint 'HTTP: GET /employees'
+2025-06-14 23:38:38.530 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/employees - 200 null application/json; charset=utf-8 970.8615ms
+2025-06-14 23:38:38.572 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/favicon.ico - null null
+2025-06-14 23:38:38.573 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/favicon.ico - 404 0 null 0.5933ms
+2025-06-14 23:38:38.573 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5000/favicon.ico, Response status code: 404
+2025-06-14 23:38:57.130 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/departments - null null
+2025-06-14 23:38:57.131 +02:00 [INF] Executing endpoint 'HTTP: GET /departments'
+2025-06-14 23:38:57.175 +02:00 [INF] Setting HTTP status code 200.
+2025-06-14 23:38:57.177 +02:00 [INF] Writing value of type 'List`1' as Json.
+2025-06-14 23:38:57.178 +02:00 [INF] Executed endpoint 'HTTP: GET /departments'
+2025-06-14 23:38:57.179 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/departments - 200 null application/json; charset=utf-8 48.2951ms

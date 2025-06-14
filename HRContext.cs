@@ -12,5 +12,6 @@ namespace HumanResources
         {
             optionsBuilder.UseSqlite("Data source=HumanResources.db");
         }
+        
     }
 }
