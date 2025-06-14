@@ -12,6 +12,12 @@ namespace HumanResources
         {
             optionsBuilder.UseSqlite("Data source=HumanResources.db");
         }
-        
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Employee>()
+            .HasOne(e => e.Department)
+            .WithMany(d => d.Employees)
+            .HasForeignKey(e => e.DepartmentID);
+        }
     }
 }

@@ -486,3 +486,28 @@ Did you mean to register the "Body (Inferred)" parameter(s) as a Service or appl
 2025-06-14 23:38:57.177 +02:00 [INF] Writing value of type 'List`1' as Json.
 2025-06-14 23:38:57.178 +02:00 [INF] Executed endpoint 'HTTP: GET /departments'
 2025-06-14 23:38:57.179 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/departments - 200 null application/json; charset=utf-8 48.2951ms
+2025-06-14 23:43:43.855 +02:00 [INF] Now listening on: http://localhost:5000
+2025-06-14 23:43:45.553 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/ - null null
+2025-06-14 23:43:45.658 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/ - 404 0 null 107.0047ms
+2025-06-14 23:43:45.674 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5000/, Response status code: 404
+2025-06-14 23:43:47.459 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - null null
+2025-06-14 23:43:47.472 +02:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-06-14 23:43:47.581 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 122.61ms
+2025-06-14 23:43:52.101 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/employees - null null
+2025-06-14 23:43:52.106 +02:00 [INF] Executing endpoint 'HTTP: GET /employees'
+2025-06-14 23:43:53.054 +02:00 [INF] Setting HTTP status code 200.
+2025-06-14 23:43:53.054 +02:00 [INF] Writing value of type 'List`1' as Json.
+2025-06-14 23:43:53.059 +02:00 [INF] Executed endpoint 'HTTP: GET /employees'
+2025-06-14 23:43:53.066 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/employees - 200 null application/json; charset=utf-8 965.1202ms
+2025-06-14 23:44:35.576 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/employees - application/json 72
+2025-06-14 23:44:35.578 +02:00 [INF] Executing endpoint 'HTTP: POST /employees'
+2025-06-14 23:44:35.767 +02:00 [INF] Setting HTTP status code 201.
+2025-06-14 23:44:35.767 +02:00 [INF] Writing value of type 'Employee' as Json.
+2025-06-14 23:44:35.768 +02:00 [INF] Executed endpoint 'HTTP: POST /employees'
+2025-06-14 23:44:35.768 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/employees - 201 null application/json; charset=utf-8 192.0115ms
+2025-06-14 23:44:44.998 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/employees - null null
+2025-06-14 23:44:44.998 +02:00 [INF] Executing endpoint 'HTTP: GET /employees'
+2025-06-14 23:44:45.079 +02:00 [INF] Setting HTTP status code 200.
+2025-06-14 23:44:45.079 +02:00 [INF] Writing value of type 'List`1' as Json.
+2025-06-14 23:44:45.079 +02:00 [INF] Executed endpoint 'HTTP: GET /employees'
+2025-06-14 23:44:45.079 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/employees - 200 null application/json; charset=utf-8 81.312ms
