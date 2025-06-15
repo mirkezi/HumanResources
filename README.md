@@ -2,12 +2,20 @@
 Hi!
 This repo is a personal project to showcase achieved knowledge in .NET backend development.
 
-## It comprehends:
+HumanResources API Web Application allow users to retrieve, create, update or delete Employees or Departments. All data is saved and made accessible on a SQLite Database.
+
+## It has implementation for:
 1. Logging with Serilog
 2. Use of middlewares
 3. Swagger / OpenAPI
 4. HTTP methods for CRUD operations.
 5. Use of EntityFrameworkcore with Sqlite database
+
+## Future Implementation:
+1. Authentication / Authorization
+2. JWT Token for API Security
+3. Encryption / Decryption
+4. Caching
 
 ### Install EF tool for migrations and commands:
 1. dotnet tool install --global dotnet-ef
