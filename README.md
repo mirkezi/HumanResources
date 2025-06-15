@@ -4,6 +4,8 @@ This repo is a personal project to showcase achieved knowledge in .NET backend d
 
 HumanResources API Web Application allow users to retrieve, create, update or delete Employees or Departments. All data is saved and made accessible on a SQLite Database.
 
+![image](https://github.com/user-attachments/assets/7d943ac7-3fff-4911-b611-dfbbd733c796)
+
 ## It has implementation for:
 1. Logging with Serilog
 2. Use of middlewares
