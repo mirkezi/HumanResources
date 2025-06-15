@@ -670,3 +670,65 @@ Did you mean to register the "Body (Inferred)" parameter(s) as a Service or appl
 2025-06-15 23:52:47.632 +02:00 [INF] Application started. Press Ctrl+C to shut down.
 2025-06-15 23:52:47.633 +02:00 [INF] Hosting environment: Development
 2025-06-15 23:52:47.633 +02:00 [INF] Content root path: C:\Users\mirko\Desktop\Projects\HumanResources
+2025-06-15 23:59:03.575 +02:00 [INF] Now listening on: http://localhost:5000
+2025-06-15 23:59:03.594 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-15 23:59:03.594 +02:00 [INF] Hosting environment: Development
+2025-06-15 23:59:03.594 +02:00 [INF] Content root path: C:\Users\mirko\Desktop\Projects\HumanResources
+2025-06-15 23:59:06.509 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html - null null
+2025-06-15 23:59:06.673 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 70.4571 ms
+2025-06-15 23:59:06.690 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.html - 200 null text/html;charset=utf-8 182.2779ms
+2025-06-15 23:59:06.784 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - null null
+2025-06-15 23:59:06.799 +02:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-06-15 23:59:06.932 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 147.2144 ms
+2025-06-15 23:59:06.933 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 149.2175ms
+2025-06-15 23:59:11.664 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/employees/1 - null null
+2025-06-15 23:59:11.675 +02:00 [INF] Executing endpoint 'HTTP: GET /employees/{id:int}'
+2025-06-15 23:59:12.804 +02:00 [INF] Setting HTTP status code 200.
+2025-06-15 23:59:12.804 +02:00 [INF] Writing value of type 'Employee' as Json.
+2025-06-15 23:59:12.807 +02:00 [INF] Executed endpoint 'HTTP: GET /employees/{id:int}'
+2025-06-15 23:59:12.807 +02:00 [INF] HTTP GET /employees/1 responded 200 in 1141.0807 ms
+2025-06-15 23:59:12.814 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/employees/1 - 200 null application/json; charset=utf-8 1148.9911ms
+2025-06-15 23:59:16.216 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/employees/3 - null null
+2025-06-15 23:59:16.217 +02:00 [INF] Executing endpoint 'HTTP: GET /employees/{id:int}'
+2025-06-15 23:59:16.258 +02:00 [INF] Setting HTTP status code 404.
+2025-06-15 23:59:16.258 +02:00 [INF] Executed endpoint 'HTTP: GET /employees/{id:int}'
+2025-06-15 23:59:16.258 +02:00 [INF] HTTP GET /employees/3 responded 404 in 41.5241 ms
+2025-06-15 23:59:16.259 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/employees/3 - 404 0 null 42.472ms
+2025-06-15 23:59:21.256 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/employees/2 - null null
+2025-06-15 23:59:21.256 +02:00 [INF] Executing endpoint 'HTTP: GET /employees/{id:int}'
+2025-06-15 23:59:21.333 +02:00 [INF] Setting HTTP status code 200.
+2025-06-15 23:59:21.333 +02:00 [INF] Writing value of type 'Employee' as Json.
+2025-06-15 23:59:21.334 +02:00 [INF] Executed endpoint 'HTTP: GET /employees/{id:int}'
+2025-06-15 23:59:21.334 +02:00 [INF] HTTP GET /employees/2 responded 200 in 78.1079 ms
+2025-06-15 23:59:21.334 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/employees/2 - 200 null application/json; charset=utf-8 78.7744ms
+2025-06-16 00:01:55.584 +02:00 [INF] Now listening on: http://localhost:5000
+2025-06-16 00:01:55.606 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-16 00:01:55.607 +02:00 [INF] Hosting environment: Development
+2025-06-16 00:01:55.607 +02:00 [INF] Content root path: C:\Users\mirko\Desktop\Projects\HumanResources
+2025-06-16 00:01:56.153 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html - null null
+2025-06-16 00:01:56.321 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 68.5994 ms
+2025-06-16 00:01:56.338 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.html - 200 null text/html;charset=utf-8 185.0667ms
+2025-06-16 00:01:56.432 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - null null
+2025-06-16 00:01:56.447 +02:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-06-16 00:01:56.566 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 132.6423 ms
+2025-06-16 00:01:56.566 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 135.171ms
+2025-06-16 00:02:24.664 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/departments/1 - null null
+2025-06-16 00:02:24.673 +02:00 [INF] Executing endpoint 'HTTP: GET /departments/{id:int}'
+2025-06-16 00:02:25.761 +02:00 [INF] Setting HTTP status code 200.
+2025-06-16 00:02:25.761 +02:00 [INF] Writing value of type 'Department' as Json.
+2025-06-16 00:02:25.764 +02:00 [INF] Executed endpoint 'HTTP: GET /departments/{id:int}'
+2025-06-16 00:02:25.764 +02:00 [INF] HTTP GET /departments/1 responded 200 in 1098.7987 ms
+2025-06-16 00:02:25.773 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/departments/1 - 200 null application/json; charset=utf-8 1109.0992ms
+2025-06-16 00:02:29.022 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/departments/2 - null null
+2025-06-16 00:02:29.024 +02:00 [INF] Executing endpoint 'HTTP: GET /departments/{id:int}'
+2025-06-16 00:02:29.069 +02:00 [INF] Setting HTTP status code 404.
+2025-06-16 00:02:29.069 +02:00 [INF] Executed endpoint 'HTTP: GET /departments/{id:int}'
+2025-06-16 00:02:29.069 +02:00 [INF] HTTP GET /departments/2 responded 404 in 45.7516 ms
+2025-06-16 00:02:29.070 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/departments/2 - 404 0 null 47.3488ms
+2025-06-16 00:02:35.054 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/departments/1 - null null
+2025-06-16 00:02:35.054 +02:00 [INF] Executing endpoint 'HTTP: GET /departments/{id:int}'
+2025-06-16 00:02:35.130 +02:00 [INF] Setting HTTP status code 200.
+2025-06-16 00:02:35.131 +02:00 [INF] Writing value of type 'Department' as Json.
+2025-06-16 00:02:35.131 +02:00 [INF] Executed endpoint 'HTTP: GET /departments/{id:int}'
+2025-06-16 00:02:35.131 +02:00 [INF] HTTP GET /departments/1 responded 200 in 77.2876 ms
+2025-06-16 00:02:35.132 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/departments/1 - 200 null application/json; charset=utf-8 77.767ms

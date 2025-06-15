@@ -95,6 +95,27 @@ try
         }
     });
 
+    //GET: Get Employee by ID
+    app.MapGet("/employees/{id:int}", async(int id, HRContext db)=>
+    {
+        try
+        {
+            var employee = await db.Employees.FindAsync(id);
+
+            if (employee == null || id > db.Employees.Count())
+            {
+                return Results.NotFound();
+            }
+
+            return Results.Ok(employee);
+        }
+        catch (Exception ex)
+        {
+            Log.Error(ex, "GET Employee by ID Error");
+            return Results.BadRequest();
+        }
+    });
+
     // POST: Create a new Employee
     app.MapPost("/employees", async (HRContext db, HumanResources.Models.Employee newEmployee) =>
     {
@@ -168,6 +189,25 @@ try
         catch (Exception ex)
         {
             Log.Error(ex, "Get Departments Error");
+            return Results.BadRequest();
+        }
+    });
+
+    //GET: Get Department by ID
+    app.MapGet("/departments/{id:int}", async(int id, HRContext db)=>
+    {
+        try
+        {
+            var department = await db.Departments.FindAsync(id);
+            if (department == null || id > db.Departments.Count())
+            {
+                return Results.NotFound();
+            }
+            return Results.Ok(department);
+        }
+        catch (Exception ex)
+        {
+            Log.Error(ex, "Get Department by ID Error");
             return Results.BadRequest();
         }
     });
