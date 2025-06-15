@@ -108,6 +108,24 @@ app.MapPost("/employees", async (HRContext db, HumanResources.Models.Employee ne
         return Results.BadRequest();
     }
 });
+
+// DELETE: Delete an employee record
+app.MapDelete("employees/{id:int}", async (int id, HRContext db) =>{
+    try
+    {
+        var employeeToDelete = db.Employees.Find(id);
+        if (employeeToDelete is not null){
+            db.Employees.Remove(employeeToDelete);
+            await db.SaveChangesAsync();
+        }
+        return Results.NoContent();
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Couldn't delete employee record: {ex.Message}");
+        return Results.BadRequest();
+    }
+});
 // HTTP METHODS -> Department
 
 //GET: Get All Departments
@@ -140,6 +158,27 @@ app.MapPost("/departments", async (HRContext db, HumanResources.Models.Departmen
         return Results.BadRequest();
     }
 });
+
+// DELETE: Delete a department
+app.MapDelete("departments/{id:int}", async (int id, HRContext db) =>{
+    try
+    {
+        var departmentToDelete = db.Departments.Find(id);
+        if (departmentToDelete is not null){
+            db.Departments.Remove(departmentToDelete);
+            await db.SaveChangesAsync();
+        }
+        return Results.NoContent();
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Couldn't delete department: {ex.Message}");
+        return Results.BadRequest();
+    }
+});
+
+
+
 app.Run();
 
 static bool isValidInput(string input)

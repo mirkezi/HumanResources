@@ -511,3 +511,93 @@ Did you mean to register the "Body (Inferred)" parameter(s) as a Service or appl
 2025-06-14 23:44:45.079 +02:00 [INF] Writing value of type 'List`1' as Json.
 2025-06-14 23:44:45.079 +02:00 [INF] Executed endpoint 'HTTP: GET /employees'
 2025-06-14 23:44:45.079 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/employees - 200 null application/json; charset=utf-8 81.312ms
+2025-06-14 23:53:55.173 +02:00 [INF] Now listening on: http://localhost:5000
+2025-06-14 23:54:06.847 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html - null null
+2025-06-14 23:54:06.998 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.html - 200 null text/html;charset=utf-8 152.4335ms
+2025-06-14 23:54:07.104 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - null null
+2025-06-14 23:54:07.119 +02:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-06-14 23:54:07.214 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 110.8614ms
+2025-06-14 23:54:14.025 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/employees - null null
+2025-06-14 23:54:14.034 +02:00 [INF] Executing endpoint 'HTTP: GET /employees'
+2025-06-14 23:54:14.979 +02:00 [INF] Setting HTTP status code 200.
+2025-06-14 23:54:14.979 +02:00 [INF] Writing value of type 'List`1' as Json.
+2025-06-14 23:54:14.982 +02:00 [INF] Executed endpoint 'HTTP: GET /employees'
+2025-06-14 23:54:14.992 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/employees - 200 null application/json; charset=utf-8 967.2175ms
+2025-06-14 23:54:39.544 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/employees - application/json 73
+2025-06-14 23:54:39.544 +02:00 [INF] Executing endpoint 'HTTP: POST /employees'
+2025-06-14 23:54:39.889 +02:00 [INF] Setting HTTP status code 201.
+2025-06-14 23:54:39.890 +02:00 [INF] Writing value of type 'Employee' as Json.
+2025-06-14 23:54:39.896 +02:00 [INF] Executed endpoint 'HTTP: POST /employees'
+2025-06-14 23:54:39.896 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/employees - 500 null application/json; charset=utf-8 352.8041ms
+2025-06-14 23:56:07.219 +02:00 [INF] Now listening on: http://localhost:5000
+2025-06-14 23:56:18.252 +02:00 [INF] Now listening on: http://localhost:5000
+2025-06-14 23:56:19.696 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html - null null
+2025-06-14 23:56:19.847 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.html - 200 null text/html;charset=utf-8 152.5752ms
+2025-06-14 23:56:19.949 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - null null
+2025-06-14 23:56:19.965 +02:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-06-14 23:56:20.067 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 118.0345ms
+2025-06-14 23:56:23.968 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/employees - null null
+2025-06-14 23:56:23.978 +02:00 [INF] Executing endpoint 'HTTP: GET /employees'
+2025-06-14 23:56:24.924 +02:00 [INF] Setting HTTP status code 200.
+2025-06-14 23:56:24.925 +02:00 [INF] Writing value of type 'List`1' as Json.
+2025-06-14 23:56:24.928 +02:00 [INF] Executed endpoint 'HTTP: GET /employees'
+2025-06-14 23:56:24.936 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/employees - 200 null application/json; charset=utf-8 967.823ms
+2025-06-14 23:56:36.956 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/departments - null null
+2025-06-14 23:56:36.956 +02:00 [INF] Executing endpoint 'HTTP: GET /departments'
+2025-06-14 23:56:37.003 +02:00 [INF] Setting HTTP status code 200.
+2025-06-14 23:56:37.006 +02:00 [INF] Writing value of type 'List`1' as Json.
+2025-06-14 23:56:37.007 +02:00 [INF] Executed endpoint 'HTTP: GET /departments'
+2025-06-14 23:56:37.007 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/departments - 200 null application/json; charset=utf-8 51.397ms
+2025-06-15 23:09:26.980 +02:00 [INF] Now listening on: http://localhost:5000
+2025-06-15 23:09:32.233 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/ - null null
+2025-06-15 23:09:32.366 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/ - 404 0 null 135.6687ms
+2025-06-15 23:09:32.389 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5000/, Response status code: 404
+2025-06-15 23:09:34.413 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - null null
+2025-06-15 23:09:34.428 +02:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-06-15 23:09:34.555 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 141.6992ms
+2025-06-15 23:09:40.896 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/employees - null null
+2025-06-15 23:09:40.915 +02:00 [INF] Executing endpoint 'HTTP: GET /employees'
+2025-06-15 23:09:42.226 +02:00 [INF] Setting HTTP status code 200.
+2025-06-15 23:09:42.227 +02:00 [INF] Writing value of type 'List`1' as Json.
+2025-06-15 23:09:42.232 +02:00 [INF] Executed endpoint 'HTTP: GET /employees'
+2025-06-15 23:09:42.240 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/employees - 200 null application/json; charset=utf-8 1344.3589ms
+2025-06-15 23:09:49.204 +02:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:5000/employees/3 - null null
+2025-06-15 23:09:49.206 +02:00 [INF] Executing endpoint 'HTTP: DELETE employees/{id:int}'
+2025-06-15 23:09:49.446 +02:00 [INF] Setting HTTP status code 204.
+2025-06-15 23:09:49.446 +02:00 [INF] Executed endpoint 'HTTP: DELETE employees/{id:int}'
+2025-06-15 23:09:49.446 +02:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:5000/employees/3 - 204 null null 242.2712ms
+2025-06-15 23:10:00.738 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/employees - null null
+2025-06-15 23:10:00.738 +02:00 [INF] Executing endpoint 'HTTP: GET /employees'
+2025-06-15 23:10:00.817 +02:00 [INF] Setting HTTP status code 200.
+2025-06-15 23:10:00.818 +02:00 [INF] Writing value of type 'List`1' as Json.
+2025-06-15 23:10:00.818 +02:00 [INF] Executed endpoint 'HTTP: GET /employees'
+2025-06-15 23:10:00.818 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/employees - 200 null application/json; charset=utf-8 80.4771ms
+2025-06-15 23:10:10.059 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/departments - null null
+2025-06-15 23:10:10.060 +02:00 [INF] Executing endpoint 'HTTP: GET /departments'
+2025-06-15 23:10:10.088 +02:00 [INF] Setting HTTP status code 200.
+2025-06-15 23:10:10.091 +02:00 [INF] Writing value of type 'List`1' as Json.
+2025-06-15 23:10:10.092 +02:00 [INF] Executed endpoint 'HTTP: GET /departments'
+2025-06-15 23:10:10.093 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/departments - 200 null application/json; charset=utf-8 33.2727ms
+2025-06-15 23:10:30.157 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/departments - application/json 44
+2025-06-15 23:10:30.158 +02:00 [INF] Executing endpoint 'HTTP: POST /departments'
+2025-06-15 23:10:30.211 +02:00 [INF] Setting HTTP status code 201.
+2025-06-15 23:10:30.211 +02:00 [INF] Writing value of type 'Department' as Json.
+2025-06-15 23:10:30.211 +02:00 [INF] Executed endpoint 'HTTP: POST /departments'
+2025-06-15 23:10:30.211 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/departments - 201 null application/json; charset=utf-8 54.1817ms
+2025-06-15 23:10:37.457 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/departments - null null
+2025-06-15 23:10:37.458 +02:00 [INF] Executing endpoint 'HTTP: GET /departments'
+2025-06-15 23:10:37.459 +02:00 [INF] Setting HTTP status code 200.
+2025-06-15 23:10:37.460 +02:00 [INF] Writing value of type 'List`1' as Json.
+2025-06-15 23:10:37.460 +02:00 [INF] Executed endpoint 'HTTP: GET /departments'
+2025-06-15 23:10:37.460 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/departments - 200 null application/json; charset=utf-8 2.7829ms
+2025-06-15 23:10:41.389 +02:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:5000/departments/2 - null null
+2025-06-15 23:10:41.390 +02:00 [INF] Executing endpoint 'HTTP: DELETE departments/{id:int}'
+2025-06-15 23:10:41.421 +02:00 [INF] Setting HTTP status code 204.
+2025-06-15 23:10:41.421 +02:00 [INF] Executed endpoint 'HTTP: DELETE departments/{id:int}'
+2025-06-15 23:10:41.421 +02:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:5000/departments/2 - 204 null null 32.0428ms
+2025-06-15 23:10:45.348 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/departments - null null
+2025-06-15 23:10:45.349 +02:00 [INF] Executing endpoint 'HTTP: GET /departments'
+2025-06-15 23:10:45.350 +02:00 [INF] Setting HTTP status code 200.
+2025-06-15 23:10:45.350 +02:00 [INF] Writing value of type 'List`1' as Json.
+2025-06-15 23:10:45.350 +02:00 [INF] Executed endpoint 'HTTP: GET /departments'
+2025-06-15 23:10:45.350 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/departments - 200 null application/json; charset=utf-8 1.8744ms
