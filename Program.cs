@@ -5,20 +5,6 @@ using Microsoft.EntityFrameworkCore;
 using HumanResources;
 using HumanResources.Models;
 
-var builder = WebApplication.CreateBuilder(args);
-
-// Add services
-builder.Services.AddSerilog();
-builder.Services.AddSwaggerGen();
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddDbContext<HRContext>();
-
-// Logging builder settings
-builder.Host.UseSerilog();
-builder.Logging.ClearProviders();
-builder.Logging.AddConsole();
-
-var app = builder.Build();
 
 // Serilog configuration
 Log.Logger = new LoggerConfiguration()
@@ -26,162 +12,238 @@ Log.Logger = new LoggerConfiguration()
     .WriteTo.File("logs/HumanResource")
     .CreateLogger();
 
-// MIDDLEWARE PIPELINE
-
-// Allow only in development stage
-if (app.Environment.IsDevelopment())
+try
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
-    app.UseDeveloperExceptionPage();
-}
+    var builder = WebApplication.CreateBuilder(args);
 
-// Global Error-Handling middleware
-app.Use(async (context, next) =>
-{
-    try
+    // Add services
+    builder.Services.AddSwaggerGen();
+    builder.Services.AddEndpointsApiExplorer();
+    builder.Services.AddDbContext<HRContext>();
+
+    // Logging builder settings
+    builder.Host.UseSerilog();
+
+    var app = builder.Build();
+
+    // MIDDLEWARE PIPELINE
+
+    app.UseSerilogRequestLogging();
+
+    // Allow only in development stage
+    if (app.Environment.IsDevelopment())
     {
-        await next.Invoke();
+        app.UseSwagger();
+        app.UseSwaggerUI();
+        app.UseDeveloperExceptionPage();
     }
-    catch (Exception ex)
-    {
-        Console.WriteLine($"Global Error: {ex.Message}");
-        context.Response.StatusCode = 500;
-        await context.Response.WriteAsync("Something went wront. Please try again later");
-    }
-});
 
-// Input Validation Middleware
-app.Use(async (context, next) =>
-{
-    try
+    // Global Error-Handling middleware
+    app.Use(async (context, next) =>
     {
-        var input = context.Request.Query["input"];
-        if (!string.IsNullOrEmpty(input))
+        try
         {
-            if (!isValidInput(input))
-            {
-                context.Response.StatusCode = 400;
-                await context.Response.WriteAsync("Invalid Input detected");
-                return;
-            }
+            await next.Invoke();
         }
-        await next.Invoke();
-    }
-    catch (Exception ex)
-    {
-        Console.WriteLine($"Input error: {ex.Message}");
-        context.Response.StatusCode = 500;
-        await context.Response.WriteAsync("An unexpected error occurred.");
-    }
-});
+        catch (Exception ex)
+        {
+            Log.Error(ex, "Global Error");
+            context.Response.StatusCode = 500;
+            await context.Response.WriteAsync("Something went wrong. Please try again later");
+        }
+    });
 
-// HTTP METHODS -> Employee
+    // Input Validation Middleware
+    app.Use(async (context, next) =>
+    {
+        try
+        {
+            var input = context.Request.Query["input"];
+            if (!string.IsNullOrEmpty(input))
+            {
+                if (!isValidInput(input))
+                {
+                    context.Response.StatusCode = 400;
+                    await context.Response.WriteAsync("Invalid Input detected");
+                    return;
+                }
+            }
+            await next.Invoke();
+        }
+        catch (Exception ex)
+        {
+            Log.Error(ex, "Input Error");
+            context.Response.StatusCode = 500;
+            await context.Response.WriteAsync("An unexpected error occurred.");
+        }
+    });
 
-// GET: Get all employees
-app.MapGet("/employees", async (HRContext db) =>
-{
-    try
-    {
-        var employees = await db.Employees.ToListAsync();
-        return Results.Ok(employees);
-    }
-    catch (Exception ex)
-    {
-        Console.WriteLine($"Can't GET Employees: {ex.Message}");
-        return Results.BadRequest();
-    }
-});
+    // HTTP METHODS -> Employee
 
-// POST: Create a new Employee
-app.MapPost("/employees", async (HRContext db, HumanResources.Models.Employee newEmployee) =>
-{
-    try
+    // GET: Get all employees
+    app.MapGet("/employees", async (HRContext db) =>
     {
-        db.Employees.Add(newEmployee);
-        await db.SaveChangesAsync();
-        return Results.Created($"Employee added: {newEmployee.FirstName}", newEmployee);
-    }
-    catch (Exception ex)
-    {
-        Console.WriteLine($"Can't create employee: {ex.Message}");
-        return Results.BadRequest();
-    }
-});
+        try
+        {
+            var employees = await db.Employees.ToListAsync();
+            return Results.Ok(employees);
+        }
+        catch (Exception ex)
+        {
+            Log.Error(ex, "Get Employees Error");
+            return Results.BadRequest();
+        }
+    });
 
-// DELETE: Delete an employee record
-app.MapDelete("employees/{id:int}", async (int id, HRContext db) =>{
-    try
+    // POST: Create a new Employee
+    app.MapPost("/employees", async (HRContext db, HumanResources.Models.Employee newEmployee) =>
     {
-        var employeeToDelete = db.Employees.Find(id);
-        if (employeeToDelete is not null){
+        try
+        {
+            db.Employees.Add(newEmployee);
+            await db.SaveChangesAsync();
+            return Results.Created($"Employee added: {newEmployee.FirstName}", newEmployee);
+        }
+        catch (Exception ex)
+        {
+            Log.Error(ex, "Create Employee Error");
+            return Results.BadRequest();
+        }
+    });
+
+    // PUT: Update an employee record
+    app.MapPut("/employees/{id:int}", async (int id, HRContext db, HumanResources.Models.Employee employee) =>
+    {
+        try
+        {
+            var employeetoUpdate = await db.Employees.FindAsync(id);
+            if (employeetoUpdate == null)
+            {
+                return Results.NotFound();
+            }
+            employeetoUpdate.FirstName = employee.FirstName;
+            employeetoUpdate.LastName = employee.LastName;
+            employeetoUpdate.DepartmentID = employee.DepartmentID;
+            await db.SaveChangesAsync();
+            return Results.Accepted();
+        }
+        catch (Exception ex)
+        {
+            Log.Error(ex, "Update Employee Error");
+            return Results.BadRequest();
+        }
+
+    });
+
+    // DELETE: Delete an employee record
+    app.MapDelete("/employees/{id:int}", async (int id, HRContext db) =>
+    {
+        try
+        {
+            var employeeToDelete = await db.Employees.FindAsync(id);
+            if (employeeToDelete == null)
+            {
+                return Results.NotFound();
+            }
             db.Employees.Remove(employeeToDelete);
             await db.SaveChangesAsync();
+            return Results.NoContent();
         }
-        return Results.NoContent();
-    }
-    catch (Exception ex)
-    {
-        Console.WriteLine($"Couldn't delete employee record: {ex.Message}");
-        return Results.BadRequest();
-    }
-});
-// HTTP METHODS -> Department
+        catch (Exception ex)
+        {
+            Log.Error(ex, "Delete Employee Error");
+            return Results.BadRequest();
+        }
+    });
+    // HTTP METHODS -> Department
 
-//GET: Get All Departments
-app.MapGet("/departments", async (HRContext db) =>
-{
-    try
+    //GET: Get All Departments
+    app.MapGet("/departments", async (HRContext db) =>
     {
-        var departments = await db.Departments.ToListAsync();
-        return Results.Ok(departments);
-    }
-    catch (Exception ex)
-    {
-        Console.WriteLine($"Couldn't retrieve departments: {ex.Message}");
-        return Results.BadRequest();
-    }
-});
+        try
+        {
+            var departments = await db.Departments.ToListAsync();
+            return Results.Ok(departments);
+        }
+        catch (Exception ex)
+        {
+            Log.Error(ex, "Get Departments Error");
+            return Results.BadRequest();
+        }
+    });
 
-//POST: Create a new Department
-app.MapPost("/departments", async (HRContext db, HumanResources.Models.Department newDepartment) =>
-{
-    try
+    //POST: Create a new Department
+    app.MapPost("/departments", async (HRContext db, HumanResources.Models.Department newDepartment) =>
     {
-        db.Departments.Add(newDepartment);
-        await db.SaveChangesAsync();
-        return Results.Created($"Department Created: {newDepartment.Name}.", newDepartment);
-    }
-    catch (Exception ex)
-    {
-        Console.WriteLine($"Couldn't create Department: {ex.Message}");
-        return Results.BadRequest();
-    }
-});
+        try
+        {
+            db.Departments.Add(newDepartment);
+            await db.SaveChangesAsync();
+            return Results.Created($"Department Created: {newDepartment.Name}.", newDepartment);
+        }
+        catch (Exception ex)
+        {
+            Log.Error(ex, "Create Department Error");
+            return Results.BadRequest();
+        }
+    });
 
-// DELETE: Delete a department
-app.MapDelete("departments/{id:int}", async (int id, HRContext db) =>{
-    try
+    // PUT: Update a department
+    app.MapPut("/departments/{id:int}", async (int id, HRContext db, HumanResources.Models.Department department) =>
     {
-        var departmentToDelete = db.Departments.Find(id);
-        if (departmentToDelete is not null){
+        try
+        {
+            var departmentToUpdate = await db.Departments.FindAsync(id);
+            if (departmentToUpdate == null)
+            {
+                return Results.NotFound();
+            }
+            departmentToUpdate.Name = department.Name;
+            await db.SaveChangesAsync();
+            return Results.Accepted();
+        }
+        catch (Exception ex)
+        {
+            Log.Error(ex, "Update Department Error");
+            return Results.BadRequest();
+        }
+    });
+
+    // DELETE: Delete a department
+    app.MapDelete("/departments/{id:int}", async (int id, HRContext db) =>
+    {
+        try
+        {
+            var departmentToDelete = await db.Departments.FindAsync(id);
+            if (departmentToDelete == null)
+            {
+                return Results.NotFound();
+            }
             db.Departments.Remove(departmentToDelete);
             await db.SaveChangesAsync();
+            return Results.NoContent();
         }
-        return Results.NoContent();
-    }
-    catch (Exception ex)
+        catch (Exception ex)
+        {
+            Log.Error(ex, "Delete Department Error");
+            return Results.BadRequest();
+        }
+    });
+
+
+    app.Run();
+
+    static bool isValidInput(string input)
     {
-        Console.WriteLine($"Couldn't delete department: {ex.Message}");
-        return Results.BadRequest();
+        return !input.Contains("<script>", StringComparison.OrdinalIgnoreCase) && input.All(char.IsLetterOrDigit);
     }
-});
 
-
-
-app.Run();
-
-static bool isValidInput(string input)
+}
+catch (Exception ex)
 {
-    return !input.Contains("<script>", StringComparison.OrdinalIgnoreCase) && input.All(char.IsLetterOrDigit);
+    Log.Fatal(ex, "Application startup failed");
+}
+finally
+{
+    Log.CloseAndFlush();
 }
