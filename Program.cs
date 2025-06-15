@@ -102,7 +102,7 @@ try
         {
             var employee = await db.Employees.FindAsync(id);
 
-            if (employee == null || id > db.Employees.Count())
+            if (employee == null)
             {
                 return Results.NotFound();
             }
@@ -199,7 +199,7 @@ try
         try
         {
             var department = await db.Departments.FindAsync(id);
-            if (department == null || id > db.Departments.Count())
+            if (department == null)
             {
                 return Results.NotFound();
             }
