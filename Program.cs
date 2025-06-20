@@ -4,12 +4,14 @@ using Swashbuckle.AspNetCore;
 using Microsoft.EntityFrameworkCore;
 using HumanResources;
 using HumanResources.Models;
+using Microsoft.AspNetCore.OpenApi;
+using System.ComponentModel;
 
 
 // Serilog configuration
 Log.Logger = new LoggerConfiguration()
     .WriteTo.Console()
-    .WriteTo.File("logs/HumanResource")
+    .WriteTo.File("logs/HumanResource.log")
     .CreateLogger();
 
 try
@@ -93,6 +95,11 @@ try
             Log.Error(ex, "Get Employees Error");
             return Results.BadRequest();
         }
+    }).WithOpenApi(op =>
+    {
+        op.Summary = "GET employees";
+        op.Description = "Return the list of all employees present in the database.";
+        return op;
     });
 
     //GET: Get Employee by ID
@@ -114,10 +121,16 @@ try
             Log.Error(ex, "GET Employee by ID Error");
             return Results.BadRequest();
         }
+    }).WithOpenApi(op =>
+    {
+        op.Parameters[0].Description = "Employee ID";
+        op.Summary = "GET employee by ID";
+        op.Description = "Retrieve all information about a specific Employee";
+        return op;
     });
 
     // POST: Create a new Employee
-    app.MapPost("/employees", async (HRContext db, HumanResources.Models.Employee newEmployee) =>
+    app.MapPost("/employees", async (HRContext db, Employee newEmployee) =>
     {
         try
         {
@@ -130,10 +143,15 @@ try
             Log.Error(ex, "Create Employee Error");
             return Results.BadRequest();
         }
+    }).WithOpenApi(op =>
+    {
+        op.Summary = "POST Employee";
+        op.Description = "Allow to create a new employee from a payload.";
+        return op;
     });
 
     // PUT: Update an employee record
-    app.MapPut("/employees/{id:int}", async (int id, HRContext db, HumanResources.Models.Employee employee) =>
+    app.MapPut("/employees/{id:int}", async (int id, HRContext db, Employee employee) =>
     {
         try
         {
@@ -153,8 +171,14 @@ try
             Log.Error(ex, "Update Employee Error");
             return Results.BadRequest();
         }
-
+    }).WithOpenApi(op =>
+    {
+        op.Parameters[0].Description = "Employee ID";
+        op.Summary = "PUT Employee by ID";
+        op.Description = "Update values of an existing employee in the database.";
+        return op;
     });
+
 
     // DELETE: Delete an employee record
     app.MapDelete("/employees/{id:int}", async (int id, HRContext db) =>
@@ -175,7 +199,14 @@ try
             Log.Error(ex, "Delete Employee Error");
             return Results.BadRequest();
         }
+    }).WithOpenApi(op =>
+    {
+        op.Parameters[0].Description = "Employee ID";
+        op.Summary = "DELETE Employee by ID";
+        op.Description = "Delete an employee from the database based on ID provided.";
+        return op;
     });
+
     // HTTP METHODS -> Department
 
     //GET: Get All Departments
@@ -191,6 +222,11 @@ try
             Log.Error(ex, "Get Departments Error");
             return Results.BadRequest();
         }
+    }).WithOpenApi(op =>
+    {
+        op.Summary = "GET Departments";
+        op.Description = "Retrieve a list of all departments registered in the db.";
+        return op;
     });
 
     //GET: Get Department by ID
@@ -210,10 +246,16 @@ try
             Log.Error(ex, "Get Department by ID Error");
             return Results.BadRequest();
         }
+    }).WithOpenApi(op =>
+    {
+        op.Parameters[0].Description = "Department ID";
+        op.Summary = "GET Department by ID";
+        op.Description = "Retrieve information about a specific department based on ID.";
+        return op;
     });
 
     //POST: Create a new Department
-    app.MapPost("/departments", async (HRContext db, HumanResources.Models.Department newDepartment) =>
+    app.MapPost("/departments", async (HRContext db, Department newDepartment) =>
     {
         try
         {
@@ -226,10 +268,15 @@ try
             Log.Error(ex, "Create Department Error");
             return Results.BadRequest();
         }
+    }).WithOpenApi(op =>
+    {
+        op.Summary = "POST Department";
+        op.Description = "Create a new department.";
+        return op;
     });
 
     // PUT: Update a department
-    app.MapPut("/departments/{id:int}", async (int id, HRContext db, HumanResources.Models.Department department) =>
+    app.MapPut("/departments/{id:int}", async (int id, HRContext db, Department department) =>
     {
         try
         {
@@ -247,6 +294,12 @@ try
             Log.Error(ex, "Update Department Error");
             return Results.BadRequest();
         }
+    }).WithOpenApi(op =>
+    {
+        op.Parameters[0].Description = "Department ID";
+        op.Summary = "PUT Department";
+        op.Description = "Update information about a specific Department based on ID.";
+        return op;
     });
 
     // DELETE: Delete a department
@@ -268,6 +321,12 @@ try
             Log.Error(ex, "Delete Department Error");
             return Results.BadRequest();
         }
+    }).WithOpenApi(op =>
+    {
+        op.Parameters[0].Description = "Department ID";
+        op.Summary = "DELETE Department by ID";
+        op.Description = "Delete a specific Department based on ID.";
+        return op;
     });
 
 
