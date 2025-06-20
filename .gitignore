@@ -1,0 +1,12 @@
+bin/
+obj/
+
+logs/
+
+.vscode/
+
+Migrations/
+
+appsettings.Development.json
+
+.gitignore
